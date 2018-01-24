@@ -1,0 +1,36 @@
+#include "graphicsUtils.h"
+#include "data.h"
+#include <c64.h>
+
+void setupDashboard() {
+    assignSprite(1, 0, 1, 1);
+    assignSprite(2, 1, 1, 1);
+    assignSprite(3, 2, 1, 1);
+    assignSprite(4, 3, 1, 1);
+    assignSprite(6, 4, 1, 1);
+
+    VIC.spr_mcolor = 0xFF;
+    VIC.spr_mcolor0 = spriteMColor1;
+    VIC.spr_mcolor1 = spriteMColor2;
+
+    VIC.spr0_x = 27;
+    VIC.spr0_y = 128;
+
+    VIC.spr1_x = 88;
+    VIC.spr1_y = 128;
+
+    VIC.spr2_x = 149;
+    VIC.spr2_y = 128;
+
+    VIC.spr3_x = 210;
+    VIC.spr3_y = 128;
+
+    VIC.spr4_x = 0x0F;
+    VIC.spr_hi_x |= 0x10;
+    VIC.spr4_y = 128;
+
+    VIC.bordercolor = 0x0F;
+    VIC.bgcolor0 = 0x01;
+
+    return;
+}
