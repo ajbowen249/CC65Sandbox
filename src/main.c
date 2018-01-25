@@ -7,19 +7,26 @@
 #include "data.h"
 #include "dashboard.h"
 
-void draw() {
+typedef char(*screenMain)(void);
 
-    return;
+screenMain switchScreens(char screenNumber) {
+    switch(screenNumber) {
+    case SC_DASHBOARD:
+        setupDashboard();
+        return dashboardMain;
+    default:
+        exit(EXIT_SUCCESS);
+    }
 }
 
 int main(void) {
-    clrscr();
-    setupDashboard();
+    screenMain screenFunc;
 
-    setupIsr(draw);
+    clrscr();
+    screenFunc = switchScreens(SC_DASHBOARD);
 
     while(1) {
-
+        screenFunc = switchScreens(screenFunc());
     }
 
     return EXIT_SUCCESS;

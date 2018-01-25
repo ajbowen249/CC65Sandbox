@@ -8,4 +8,10 @@ extern const char intro[];
 
 #define SPRITESHEET 0x2000
 
+#define SC_DASHBOARD 0
+#define SC_ACTIVITY 1
+#define SC_ME       2
+#define SC_ACCOUNT  3
+#define SC_LEARN    4
+
 #endif // __DATA_H
