@@ -10,8 +10,8 @@ void setupDashboard() {
     assignSprite(6, 4, 1, 1);
 
     VIC.spr_mcolor = 0xFF;
-    VIC.spr_mcolor0 = spriteMColor1;
-    VIC.spr_mcolor1 = spriteMColor2;
+    VIC.spr_mcolor0 = SPRITE_M_COLOR_1;
+    VIC.spr_mcolor1 = SPRITE_M_COLOR_2;
 
     VIC.spr0_x = 37;
     VIC.spr0_y = 128;

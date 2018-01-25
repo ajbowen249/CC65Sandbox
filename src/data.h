@@ -3,8 +3,8 @@
 
 extern const char intro[];
 
-char spriteMColor1 = 0x0F;
-char spriteMColor2 = 0x0E;
+#define SPRITE_M_COLOR_1 0x0F;
+#define SPRITE_M_COLOR_2 0x0E;
 
 #define SPRITESHEET 0x2000
 
