@@ -13,19 +13,19 @@ void setupDashboard() {
     VIC.spr_mcolor0 = spriteMColor1;
     VIC.spr_mcolor1 = spriteMColor2;
 
-    VIC.spr0_x = 27;
+    VIC.spr0_x = 37;
     VIC.spr0_y = 128;
 
-    VIC.spr1_x = 88;
+    VIC.spr1_x = 99;
     VIC.spr1_y = 128;
 
-    VIC.spr2_x = 149;
+    VIC.spr2_x = 160;
     VIC.spr2_y = 128;
 
-    VIC.spr3_x = 210;
+    VIC.spr3_x = 221;
     VIC.spr3_y = 128;
 
-    VIC.spr4_x = 0x0F;
+    VIC.spr4_x = 0x1B;
     VIC.spr_hi_x |= 0x10;
     VIC.spr4_y = 128;
 
