@@ -1,11 +1,13 @@
 #include "graphicsUtils.h"
 #include "data.h"
+#include "moreC64.h"
 #include <c64.h>
 #include <conio.h>
 
 #define NUM_OPTIONS 5
 #define SELECTED_OFFSET 9
-unsigned int selection = 0;
+
+int selection = 0;
 unsigned int baseSprites[NUM_OPTIONS] = {
     1, 2, 3, 4, 6
 };
@@ -23,8 +25,15 @@ void updateMenuSprites() {
 }
 
 void changeSelection(char direction) {
-    unsigned int offset = direction ? 1 : -1;
-    selection = (selection + offset) % NUM_OPTIONS;
+    int offset = direction ? 1 : -1;
+    selection += offset;
+    if (selection >= NUM_OPTIONS) {
+        selection = 0;
+    }
+    else if (selection < 0) {
+        selection = NUM_OPTIONS - 1;
+    }
+
     updateMenuSprites();
 }
 
@@ -66,6 +75,19 @@ void setupDashboard() {
 
 char dashboardMain(void) {
     while(1) {
+        if(kbhit()) {
+            char key = cgetc();
+            switch(key) {
+            case CURSOR_LEFT:
+                changeSelection(0);
+                break;
+            case CURSOR_RIGHT:
+                changeSelection(1);
+                break;
+            default:
+                break;
+            }
+        }
     }
 
     return SC_DASHBOARD;

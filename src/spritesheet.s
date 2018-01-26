@@ -1,4 +1,4 @@
-; generated with spritemate on 23/01/2018, 19:29:25
+; generated with spritemate on 25/01/2018, 21:36:49
 .segment "sprites"
 
 ;sprite_1
@@ -123,11 +123,11 @@
 
 ;sprite_13
 .byte $00,$00,$00,$00,$ff,$00,$03,$ff
-.byte $c0,$03,$ff,$c0,$0f,$fa,$f0,$0f
-.byte $e0,$b0,$0f,$e0,$b0,$3e,$a0,$a8
-.byte $38,$2a,$08,$38,$20,$88,$38,$20
-.byte $88,$3a,$80,$28,$20,$80,$28,$20
-.byte $80,$28,$0a,$aa,$a0,$0f,$ff,$f0
+.byte $c0,$03,$ff,$c0,$0f,$af,$f0,$0e
+.byte $0b,$f0,$0e,$0b,$f0,$3e,$0a,$bc
+.byte $3f,$a8,$2c,$3e,$08,$2c,$3e,$08
+.byte $2c,$38,$0a,$ac,$38,$20,$08,$38
+.byte $20,$08,$0a,$aa,$a0,$0f,$ff,$f0
 .byte $0f,$ff,$f0,$03,$ff,$c0,$03,$ff
 .byte $c0,$00,$ff,$00,$00,$00,$00,$83
 
