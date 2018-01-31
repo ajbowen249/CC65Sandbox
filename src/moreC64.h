@@ -7,5 +7,6 @@
 #define CURSOR_DOWN  ((char)0x11)
 #define CURSOR_LEFT  ((char)0x9D)
 #define CURSOR_RIGHT ((char)0x1D)
+#define RETURN       ((char)0x0D)
 
 #endif // __MOREC64_H

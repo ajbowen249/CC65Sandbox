@@ -6,6 +6,7 @@
 #include "coreTiming.h"
 #include "data.h"
 #include "dashboard.h"
+#include "activity.h"
 
 typedef char(*screenMain)(void);
 
@@ -14,6 +15,9 @@ screenMain switchScreens(char screenNumber) {
     case SC_DASHBOARD:
         setupDashboard();
         return dashboardMain;
+    case SC_ACTIVITY:
+        setupActivity();
+        return activityMain;
     default:
         exit(EXIT_SUCCESS);
     }

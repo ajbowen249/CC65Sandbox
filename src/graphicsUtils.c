@@ -17,3 +17,12 @@ void assignSprite(unsigned int sheetIndex, unsigned int vicIndex, char stretchX,
     VIC.spr_exp_x = (VIC.spr_exp_x & maskInv) | stretchXByte;
     VIC.spr_exp_y = (VIC.spr_exp_y & maskInv) | stretchYByte;
 }
+
+void deactivateSprite(unsigned int vicIndex) {
+    char mask = 0xFE << vicIndex;
+    VIC.spr_ena = VIC.spr_ena & mask;
+}
+
+void deactivateAllSprites() {
+    VIC.spr_ena = 0x00;
+}
